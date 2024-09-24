@@ -7,7 +7,6 @@ var swiper = new Swiper(".unggulan", {
     delay: 1500,
     disableOnInteraction: false,
   },
-  effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   coverflowEffect: {
@@ -16,10 +15,6 @@ var swiper = new Swiper(".unggulan", {
     depth: 100,
     modifier: 1,
     slideShadows: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
   keyboard: {
     enabled: true,
@@ -38,3 +33,7 @@ let header = document.querySelector('header')
 window.addEventListener('scroll',() => {
   header.classList.toggle('shadow',window.scrollY > 0)
 })
+
+window.onscroll = () => {
+navbar.classList.remove('active')
+}
